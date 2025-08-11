@@ -99,7 +99,25 @@
     </ul>
   </div>
 </section>
-				
+				<ul class="actions">
+  <li><a href="#" id="learnMoreBtn" class="button">Learn More</a></li>
+</ul>
+				<script>
+  document.getElementById('learnMoreBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const educationSection = document.getElementById('education');
+
+    if (educationSection.style.display === 'none' || educationSection.style.display === '') {
+      educationSection.style.display = 'block';
+      educationSection.scrollIntoView({behavior: "smooth"});
+      this.textContent = 'Hide';
+    } else {
+      educationSection.style.display = 'none';
+      this.textContent = 'Learn More';
+    }
+  });
+</script>
+
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent Work</h2>
